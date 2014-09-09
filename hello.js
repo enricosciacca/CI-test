@@ -1,8 +1,12 @@
 var http = require('http');
 
+var localAddress = '127.0.0.1';
+var localPort = 1337;
+var localUrl = 'http://' + localAddress + ':'+ localPort +'/';
+
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Hello World\n');
-}).listen(1337, '127.0.0.1');
+}).listen(localPort, localAddress);
 
-console.log('Server running at http://127.0.0.1:1337/');
+console.log( 'Server running at ' + localUrl );
