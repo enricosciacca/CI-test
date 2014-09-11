@@ -7,6 +7,6 @@ var localUrl = 'http://' + localAddress + ':'+ localPort +'/';
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Hello World\n');
-}).listen(localPort, localAddress);
+}).listen(localPort, localAddress)
 
 console.log( 'Server running at ' + localUrl );
